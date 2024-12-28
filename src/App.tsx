@@ -33,7 +33,7 @@ function App() {
         {/* Footer */}
         <footer className="bg-gray-800 text-gray-100 p-4 mt-8">
           <div className="container mx-auto text-center">
-            <TypingEffect text="© 2023 Backend Developer Portfolio. Tüm hakları saklıdır." />
+            <TypingEffect text="© 2023 Burak Özlece. Tüm hakları saklıdır." />
           </div>
         </footer>
       </div>
