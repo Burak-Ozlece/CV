@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Burak-Ozlece/CV.git/static/css/main.b490fe4a.css",
+    "main.js": "/Burak-Ozlece/CV.git/static/js/main.965d5ada.js",
+    "index.html": "/Burak-Ozlece/CV.git/index.html",
+    "main.b490fe4a.css.map": "/Burak-Ozlece/CV.git/static/css/main.b490fe4a.css.map",
+    "main.965d5ada.js.map": "/Burak-Ozlece/CV.git/static/js/main.965d5ada.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b490fe4a.css",
+    "static/js/main.965d5ada.js"
+  ]
+}
