@@ -11,15 +11,22 @@ function App() {
     <div className="dark">
       <div className={`bg-gray-900 text-gray-100 min-h-screen`}>
         {/* Header/Navigation */}
-        <div className="container mx-auto flex justify-between items-center p-4">
-          <nav className="flex space-x-4">
-            <a href="#home" className="hover:text-green-400">Ana Sayfa</a>
-            <a href="#about" className="hover:text-green-400">Hakkımda</a>
-            <a href="#resume" className="hover:text-green-400">Özgeçmiş</a>
-            <a href="#projects" className="hover:text-green-400">Projelerim</a>
-            <a href="#contact" className="hover:text-green-400">İletişim</a>
-          </nav>
-        </div>
+        <header className="fixed top-0 left-0 right-0 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800 z-50">
+          <div className="container mx-auto flex justify-between items-center p-4">
+            <span className="text-xl font-bold text-green-400">
+              <TypingEffect text="Backend Dev" />
+            </span>
+            <nav>
+              <ul className="flex space-x-6">
+                <li><a href="#home" className="hover:text-green-400 transition-colors duration-200">Ana Sayfa</a></li>
+                <li><a href="#about" className="hover:text-green-400 transition-colors duration-200">Hakkımda</a></li>
+                <li><a href="#resume" className="hover:text-green-400 transition-colors duration-200">Özgeçmiş</a></li>
+                <li><a href="#projects" className="hover:text-green-400 transition-colors duration-200">Projelerim</a></li>
+                <li><a href="#contact" className="hover:text-green-400 transition-colors duration-200">İletişim</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
 
         {/* Main Content */}
         <main className="container mx-auto px-4 py-8">
