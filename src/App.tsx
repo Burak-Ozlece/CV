@@ -13,7 +13,7 @@ function App() {
         {/* Header/Navigation */}
         <header className="fixed top-0 left-0 right-0 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800 z-50">
           <div className="container mx-auto flex justify-between items-center p-4">
-            <span className="text-xl font-bold text-green-400">
+            <span className="hidden md:block text-xl font-bold text-green-400 h-[30px] overflow-hidden w-[150px]">
               <TypingEffect text="Backend Dev" />
             </span>
             <nav>
@@ -40,7 +40,9 @@ function App() {
         {/* Footer */}
         <footer className="bg-gray-800 text-gray-100 p-4 mt-8">
           <div className="container mx-auto text-center">
-            <TypingEffect text="© 2023 Burak Özlece. Tüm hakları saklıdır." />
+            <div className="h-[25px] overflow-hidden">
+              <TypingEffect text="© 2023 Burak Özlece. Tüm hakları saklıdır." />
+            </div>
           </div>
         </footer>
       </div>
