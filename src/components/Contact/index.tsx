@@ -29,26 +29,20 @@ export function Contact() {
               <TypingEffect text="İletişim Bilgileri" />
             </h3>
             <p className="mb-2 text-gray-300">
-              <TypingEffect text="Email: burak.ozlece@example.com" />
-            </p>
-            <p className="mb-2 text-gray-300">
-              <TypingEffect text="Telefon: +90 555 123 4567" />
+              <TypingEffect text="E posta: burakozlece@hotmail.com" />
             </p>
             <p className="mb-4 text-gray-300">
-              <TypingEffect text="Konum: İstanbul, Türkiye" />
+              <TypingEffect text="Konum: Kayseri, Türkiye" />
             </p>
             <h3 className="text-xl font-semibold mb-4 text-green-300">
               <TypingEffect text="Sosyal Medya" />
             </h3>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com/in/burakozlece" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
+              <a href="https://www.linkedin.com/in/burak-ozlece/" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
                 <TypingEffect text="LinkedIn" />
               </a>
-              <a href="https://github.com/burakozlece" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
+              <a href="https://github.com/Burak-Ozlece" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
                 <TypingEffect text="GitHub" />
-              </a>
-              <a href="https://twitter.com/burakozlece" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
-                <TypingEffect text="Twitter" />
               </a>
             </div>
           </div>

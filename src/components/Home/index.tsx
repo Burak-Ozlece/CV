@@ -47,8 +47,8 @@ export function Home() {
 
             {/* Açıklama */}
             <div className="max-w-2xl mx-auto">
-              <p className="text-gray-300 text-lg leading-relaxed h-[80px] overflow-hidden">
-                <TypingEffect text="Merhaba! Ben Burak. Backend teknolojileri konusunda uzmanlaşmış, karmaşık problemleri çözmekten ve ölçeklenebilir sistemler tasarlamaktan keyif alan bir geliştiriciyim." />
+              <p className="text-gray-300 text-lg leading-relaxed h-[200px] overflow-hidden">
+                <TypingEffect text="Merhaba!Ben Burak, backend geliştirme teknolojileri üzerine yoğunlaşmış ve bu alanda kendimi sürekli geliştiren bir yazılım geliştiricisiyim. .NET, SignalR, Docker, gRPC, JWT gibi modern teknolojiler kullanarak ölçeklenebilir, güvenli ve performans odaklı sistemler tasarlamaktan büyük bir keyif alıyorum.Karmaşık problemlere yaratıcı çözümler bulmak, kullanıcı dostu ve verimli altyapılar oluşturmak benim en büyük tutkularımdan biri. Ekibinizde yer alarak projelerinize değer katmaya ve hedeflerinizi gerçeğe dönüştürmeye yardımcı olmaya hazırım!" />
               </p>
             </div>
 

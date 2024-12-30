@@ -98,7 +98,7 @@ function App() {
         <footer className="relative z-10 bg-gray-800 text-gray-100 p-4 mt-8">
           <div className="container mx-auto text-center">
             <div className="h-[25px] overflow-hidden">
-              <TypingEffect text="© 2023 Burak Özlece. Tüm hakları saklıdır." />
+              <TypingEffect text="© 2024 Burak Özlece. Tüm hakları saklıdır." />
             </div>
           </div>
         </footer>
