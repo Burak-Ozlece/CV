@@ -2,7 +2,7 @@ import React from 'react'
 import { TypingEffect } from '../TypingEffect'
 
 export function Resume() {
-  const pdfUrl = "`${process.env.PUBLIC_URL}/KisiselBilgiler.pdf`";
+  const pdfUrl = `${process.env.PUBLIC_URL}/KisiselBilgiler.pdf`;
 
   return (
     <section id="resume" className="py-20">
