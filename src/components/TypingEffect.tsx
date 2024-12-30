@@ -11,7 +11,7 @@ export function TypingEffect({ text }: { text: string }) {
       const timer = setTimeout(() => {
         setDisplayText((prev) => prev + text[index])
         setIndex((prev) => prev + 1)
-      }, 100)
+      }, 75)
       return () => clearTimeout(timer)
     }
   }, [index, text])

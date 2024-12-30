@@ -25,9 +25,9 @@ function App() {
 
   return (
     <div className="dark">
-      <div className={`bg-gray-900 text-gray-100 min-h-screen`}>
+      <div className={`bg-gray-900 text-gray-100 min-h-screen relative`}>
         {/* Header/Navigation */}
-        <header className="fixed top-0 left-0 right-0 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800 z-50">
+        <header className="fixed top-0 left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 z-[100]">
           <div className="container mx-auto flex justify-between items-center p-4">
             <span className="hidden md:block text-xl font-bold text-green-400 h-[30px] overflow-hidden w-[150px]">
               <TypingEffect text="Backend Dev" />
@@ -84,16 +84,18 @@ function App() {
         </header>
 
         {/* Main Content */}
-        <main className="container mx-auto px-4 py-8">
-          <Home />
-          <About />
-          <Resume />
-          <Projects />
-          <Contact />
+        <main className="relative z-10 pt-28 md:pt-32">
+          <div className="container mx-auto px-4">
+            <Home />
+            <About />
+            <Resume />
+            <Projects />
+            <Contact />
+          </div>
         </main>
 
         {/* Footer */}
-        <footer className="bg-gray-800 text-gray-100 p-4 mt-8">
+        <footer className="relative z-10 bg-gray-800 text-gray-100 p-4 mt-8">
           <div className="container mx-auto text-center">
             <div className="h-[25px] overflow-hidden">
               <TypingEffect text="© 2023 Burak Özlece. Tüm hakları saklıdır." />
