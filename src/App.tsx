@@ -9,6 +9,20 @@ import { TypingEffect } from './components/TypingEffect'
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const handleMenuClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const href = e.currentTarget.getAttribute('href')
+    
+    // Önce menüyü kapat
+    setIsMenuOpen(false)
+    
+    // Sonra smooth scroll ile hedefe git
+    setTimeout(() => {
+      const target = document.querySelector(href as string)
+      target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 300) // Menü kapanma animasyonundan sonra scroll başlasın
+  }
+
   return (
     <div className="dark">
       <div className={`bg-gray-900 text-gray-100 min-h-screen`}>
@@ -21,7 +35,7 @@ function App() {
 
             {/* Hamburger Menu Button */}
             <button 
-              className="md:hidden text-gray-400 hover:text-green-400"
+              className="md:hidden text-gray-400 hover:text-green-400 transition-colors duration-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -32,23 +46,39 @@ function App() {
             {/* Desktop Navigation */}
             <nav className="hidden md:block">
               <ul className="flex space-x-6">
-                <li><a href="#home" className="hover:text-green-400 transition-colors duration-200">Ana Sayfa</a></li>
-                <li><a href="#about" className="hover:text-green-400 transition-colors duration-200">Hakkımda</a></li>
-                <li><a href="#resume" className="hover:text-green-400 transition-colors duration-200">Özgeçmiş</a></li>
-                <li><a href="#projects" className="hover:text-green-400 transition-colors duration-200">Projelerim</a></li>
-                <li><a href="#contact" className="hover:text-green-400 transition-colors duration-200">İletişim</a></li>
+                <li><a href="#home" onClick={handleMenuClick} className="hover:text-green-400 transition-colors duration-200">Ana Sayfa</a></li>
+                <li><a href="#about" onClick={handleMenuClick} className="hover:text-green-400 transition-colors duration-200">Hakkımda</a></li>
+                <li><a href="#resume" onClick={handleMenuClick} className="hover:text-green-400 transition-colors duration-200">Özgeçmiş</a></li>
+                <li><a href="#projects" onClick={handleMenuClick} className="hover:text-green-400 transition-colors duration-200">Projelerim</a></li>
+                <li><a href="#contact" onClick={handleMenuClick} className="hover:text-green-400 transition-colors duration-200">İletişim</a></li>
               </ul>
             </nav>
           </div>
 
           {/* Mobile Navigation */}
-          <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden bg-gray-900/95 border-b border-gray-800`}>
+          <nav 
+            className={`
+              transform transition-all duration-300 ease-in-out
+              ${isMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-full pointer-events-none'}
+              md:hidden bg-gray-900/95 border-b border-gray-800 absolute w-full top-[64px] left-0 z-40
+            `}
+          >
             <ul className="flex flex-col items-center py-4">
-              <li className="py-2"><a href="#home" className="hover:text-green-400 transition-colors duration-200">Ana Sayfa</a></li>
-              <li className="py-2"><a href="#about" className="hover:text-green-400 transition-colors duration-200">Hakkımda</a></li>
-              <li className="py-2"><a href="#resume" className="hover:text-green-400 transition-colors duration-200">Özgeçmiş</a></li>
-              <li className="py-2"><a href="#projects" className="hover:text-green-400 transition-colors duration-200">Projelerim</a></li>
-              <li className="py-2"><a href="#contact" className="hover:text-green-400 transition-colors duration-200">İletişim</a></li>
+              <li className="py-2 w-full text-center">
+                <a href="#home" onClick={handleMenuClick} className="block w-full px-4 py-2 hover:text-green-400 hover:bg-gray-800 transition-colors duration-200">Ana Sayfa</a>
+              </li>
+              <li className="py-2 w-full text-center">
+                <a href="#about" onClick={handleMenuClick} className="block w-full px-4 py-2 hover:text-green-400 hover:bg-gray-800 transition-colors duration-200">Hakkımda</a>
+              </li>
+              <li className="py-2 w-full text-center">
+                <a href="#resume" onClick={handleMenuClick} className="block w-full px-4 py-2 hover:text-green-400 hover:bg-gray-800 transition-colors duration-200">Özgeçmiş</a>
+              </li>
+              <li className="py-2 w-full text-center">
+                <a href="#projects" onClick={handleMenuClick} className="block w-full px-4 py-2 hover:text-green-400 hover:bg-gray-800 transition-colors duration-200">Projelerim</a>
+              </li>
+              <li className="py-2 w-full text-center">
+                <a href="#contact" onClick={handleMenuClick} className="block w-full px-4 py-2 hover:text-green-400 hover:bg-gray-800 transition-colors duration-200">İletişim</a>
+              </li>
             </ul>
           </nav>
         </header>
