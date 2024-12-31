@@ -1,25 +1,35 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export function TypingEffect({ text }: { text: string }) {
   const [displayText, setDisplayText] = useState('')
-  const [index, setIndex] = useState(0)
+  const [showCursor, setShowCursor] = useState(true)
 
   useEffect(() => {
-    if (index < text.length) {
-      const timer = setTimeout(() => {
-        setDisplayText((prev) => prev + text[index])
-        setIndex((prev) => prev + 1)
-      }, 75)
-      return () => clearTimeout(timer)
+    let currentIndex = 0
+    const typingInterval = setInterval(() => {
+      if (currentIndex < text.length) {
+        setDisplayText(text.slice(0, currentIndex + 1))
+        currentIndex++
+      } else {
+        clearInterval(typingInterval)
+        // Yazma işlemi bittiğinde 500ms sonra imleci gizle
+        setTimeout(() => {
+          setShowCursor(false)
+        }, 500)
+      }
+    }, 50)
+
+    return () => {
+      clearInterval(typingInterval)
     }
-  }, [index, text])
+  }, [text])
 
   return (
-    <span className="inline-block">
+    <span>
       {displayText}
-      <span className="animate-pulse">|</span>
+      {showCursor && <span className="animate-pulse">|</span>}
     </span>
   )
 }
