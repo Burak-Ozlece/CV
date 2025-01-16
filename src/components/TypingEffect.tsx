@@ -17,7 +17,7 @@ export function TypingEffect({ text }: { text: string }) {
         // Yazma işlemi bittiğinde 500ms sonra imleci gizle
         setTimeout(() => {
           setShowCursor(false)
-        }, 500)
+        }, 700)
       }
     }, 50)
 
