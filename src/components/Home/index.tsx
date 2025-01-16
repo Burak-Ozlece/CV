@@ -5,7 +5,7 @@ export function Home() {
   const technologies = [
     'C#', '.NET', 'SignalR', 'Docker', 'Git', 'Github', 'gRPC', 'Nginx', 'JWT', 'Micro Service'
   ]
-
+  const pictureUrl = `${process.env.PUBLIC_URL}/foto.jpg`;
   return (
     <section id="home" className="min-h-screen flex items-center justify-center py-20 text-center">
       <div className="container mx-auto px-4 max-w-4xl">
@@ -14,11 +14,11 @@ export function Home() {
           <div className="relative inline-block">
             <div className="absolute inset-0 rounded-full bg-green-400/20 animate-pulse"></div>
             <img
-              src="/placeholder.svg"
+              src={pictureUrl}
               alt="Profile Picture"
               width={300}
               height={300}
-              className="relative w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full mx-auto border-2 border-green-400 shadow-lg shadow-green-500/20 hover:scale-105 transition-transform duration-300"
+             className="relative w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full border-4 border-green-400 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
             />
           </div>
 
