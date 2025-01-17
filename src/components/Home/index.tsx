@@ -18,7 +18,7 @@ export function Home() {
               alt="Profile Picture"
               width={300}
               height={300}
-              style="object-fit: cover;"
+              style={{objectFit: "cover"}}
              className="relative w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full border-4 border-green-400 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
             />
           </div>
